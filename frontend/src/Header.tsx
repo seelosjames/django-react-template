@@ -5,6 +5,10 @@ import { useContext } from "react";
 
 function Header() {
 	const authContext = useContext(AuthContext);
+
+	if (!authContext) {
+    throw new Error("AuthContext must be used within an AuthProvider");
+  }
 	
 	return (
 		<header className="w-full bg-white shadow-md py-4 px-16 flex justify-between items-center fixed">

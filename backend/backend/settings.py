@@ -78,9 +78,13 @@ CORS_ALLOW_ALL_ORIGINS = True
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "your_db_name",
+        "USER": "your_db_user",
+        "PASSWORD": "12345678",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 

@@ -38,6 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
@@ -73,6 +74,10 @@ SIMPLE_JWT = {
 
 CORS_ALLOW_ALL_ORIGINS = True 
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
@@ -80,8 +85,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "your_db_name",
-        "USER": "your_db_user",
+        "NAME": "django-react-template",
+        "USER": "postgres",
         "PASSWORD": "12345678",
         "HOST": "localhost",
         "PORT": "5432",
